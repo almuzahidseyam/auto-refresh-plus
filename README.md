@@ -18,7 +18,11 @@ For years, this repository sat as a **Private** tool on my GitHub. Now, as I tra
 
 ## ✨ Features
 
-- **Custom Intervals:** Set exact refresh times (in minutes) down to the millisecond.
+- **Custom Intervals:** Set the refresh interval in minutes. Chrome schedules the work through
+  its own alarm service, which enforces a minimum period, so sub-minute precision is not
+  something a Manifest V3 extension can offer.
+- **Refreshes the tab you started on.** The target tab is chosen when you press Start and
+  remembered, so switching to another tab to work does not move the refresh with you.
 - **Zero Bloat:** Pure vanilla JavaScript, using Chrome's native `chrome.alarms` API for extreme battery efficiency.
 - **Background Service Worker:** Won't aggressively drain your laptop battery like other refreshers. It runs quietly in the background.
 - **Privacy First:** Requires absolutely minimal permissions. No data tracking, no external server calls.

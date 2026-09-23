@@ -1,0 +1,8 @@
+# packaged builds -- releases belong in GitHub Releases, not the tree
+*.zip
+
+# editors / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
